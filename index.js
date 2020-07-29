@@ -59,17 +59,17 @@ function updatedb() {
 let container = document.querySelector('#container');
 
 //constructs new book objects
-function Book(title, author, numPages, readYet) {
-    this.Atitle = title;
-    this.Bauthor = `By: ${author}`;
-    this.CnumPages = ` with ${numPages} pages`;
-    if(readYet.toLowerCase() == 'yes') {
-        this.DreadYet = "has been read";
-    } else {
-        this.DreadYet = "has not been read";
+class Book {
+    constructor(Atitle, Bauthor, CnumPages, DreadYet) {
+        this.Atitle = Atitle;
+        this.Bauthor = Bauthor;
+        this.CnumPages = CnumPages;
+        if(DreadYet.toLowerCase() == 'yes') {
+            this.DreadYet = "has been read";
+        } else {
+            this.DreadYet = "has not been read";
+        }
     }
-
-    
 }
 
 //adds new books to array
